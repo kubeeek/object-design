@@ -3,7 +3,7 @@ program Sort;
 var i: integer;
 var j: integer;
 var temp: integer;
-var MAX_RANGE: integer = 1000;
+var MAX_RANGE: integer = 100;
 var random_array : array of integer;
 
 procedure FillArrayWithRandomness(var arr : array of integer; var max : integer);
