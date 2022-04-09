@@ -3,3 +3,5 @@ App uses a air quality index api (AQICN). There is a one endpoint. ``localhost:1
 The proxy class is in ``EnvironmentGetter.go``. It works as a lazy initializer of the real class.
 
 API key left as eventually to test the app.
+
+To run the app, use a ``go run .`` command in the directory.
