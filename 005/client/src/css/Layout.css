@@ -1,0 +1,32 @@
+.Layout-nav {
+    align-self: flex-end;
+    margin-right: 5rem;
+    text-decoration: none;
+}
+
+.Layout-nav a {
+    text-decoration: none;
+    color: var(--main-text);
+}
+
+.Layout-nav ul {
+    display: flex;
+}
+
+.Layout-nav-link {
+    display: block;
+    width: auto;
+    padding: 0rem 2rem;
+    position: relative;
+}
+
+.Layout-nav-link span.Layout-nav-link-count {
+    text-align: center;
+    vertical-align: middle;
+    top: -8px;
+    font-size: 0.8rem;
+    position: absolute;
+    padding: 0rem 0.2rem;
+    background: red;
+    border-radius: 100%;
+}
