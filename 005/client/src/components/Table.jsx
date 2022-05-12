@@ -7,7 +7,7 @@ export default function ProductTable({ headers = [], body }) {
             <table className="ProductTable-table">
                 <thead>
                     <tr>
-                        {headers.map(header => <th>{header}</th>)}
+                        {headers.map((header, index) => <th key={index}>{header}</th>)}
                     </tr>
                 </thead>
                 <tbody>

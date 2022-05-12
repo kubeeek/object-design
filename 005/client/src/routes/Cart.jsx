@@ -41,7 +41,7 @@ export default function Cart({ CartTable, cart, userId, onOrderButtonCallback })
             <header className="Section-header">
                 Your cart
             </header>
-            {cart.length > 0 && <div className="Home-container">{CartTable}</div>}
+            {cart.length > 0 && <div className="Section-container">{CartTable}</div>}
             <div className="Section-container">
                 {cart.length > 0
                     ? <CartSummary cart={cart} onClickCallback={placeOrder} />

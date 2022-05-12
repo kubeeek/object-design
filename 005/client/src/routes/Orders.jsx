@@ -8,7 +8,6 @@ import Table from '../components/Table';
 export default function Orders({ userId }) {
     const [orders, setOrders] = useState([]);
     const [refresh, setRefresh] = useState(0);
-    console.log(userId);
 
     async function getOrders() {
         console.log(userId);
@@ -32,6 +31,7 @@ export default function Orders({ userId }) {
 
     useEffect(() => {
         getOrders();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [refresh]);
 
     return (
@@ -43,8 +43,8 @@ export default function Orders({ userId }) {
                 <Table
                     headers={["Order #", "Total price", ""]}
                     body={
-                        orders.map(entry =>
-                            <tr key={entry.uuid}
+                        orders.map((entry, index) =>
+                            <tr key={index}
                                 className="ProductTable-table-row"
                             >
                                 <td>{entry.uuid}</td>
