@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9e812774-2f17-410d-b42a-e12d1b3e8dbc" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Swift File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <hideBySeverity>
+      <option value="12" />
+      <option value="13" />
+      <option value="14" />
+      <option value="15" />
+      <option value="16" />
+    </hideBySeverity>
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2022" />
+    <option name="minorVersion" value="1.1" />
+  </component>
+  <component name="ProjectId" id="29FLybTC4UVjVeFRqODegOZ1qFq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/home/user/kody/obj/006/hello/Resources/Views/shared",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Resources/Views/shared" />
+      <recent name="$PROJECT_DIR$/Resources/Views/users" />
+      <recent name="$PROJECT_DIR$/Sources/App/Migrations" />
+      <recent name="$PROJECT_DIR$/Sources/App/Models" />
+      <recent name="$PROJECT_DIR$/Resources/Views/tasks" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Resources/Views" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Swift Package Run.Run">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SwiftPackageManagerRunConfiguration" factoryName="Swift Package Run" PROGRAM_PARAMS="--static-swift-stdlib" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hello" TARGET_NAME="App" CONFIG_NAME="App" RUN_TARGET_PROJECT_NAME="hello" RUN_TARGET_NAME="Run" WAS_MODIFIED="">
+      <method v="2">
+        <option name="SPM.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run" type="SwiftPackageManagerRunConfiguration" factoryName="Swift Package Run" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hello" TARGET_NAME="Run" CONFIG_NAME="Run" RUN_TARGET_PROJECT_NAME="hello" RUN_TARGET_NAME="Run" WAS_MODIFIED="">
+      <method v="2">
+        <option name="SPM.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTests" type="SwiftPackageManagerTestRunConfiguration" factoryName="Swift Package Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="hello" TARGET_NAME="AppTests" CONFIG_NAME="AppTests" RUN_TARGET_PROJECT_NAME="hello" RUN_TARGET_NAME="AppTests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="SPM.BUILD_TASK_PROVIDER" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Swift Package Run.App" />
+      <item itemvalue="Swift Package Run.Run" />
+      <item itemvalue="Swift Package Test.AppTests" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e812774-2f17-410d-b42a-e12d1b3e8dbc" name="Changes" comment="" />
+      <created>1652704143407</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1652704143407</updated>
+      <workItem from="1652704146822" duration="707000" />
+      <workItem from="1652704869705" duration="2951000" />
+      <workItem from="1652707925580" duration="1495000" />
+      <workItem from="1652714282282" duration="8800000" />
+      <workItem from="1652812947510" duration="398000" />
+      <workItem from="1652815032268" duration="1945000" />
+      <workItem from="1652819968642" duration="356000" />
+      <workItem from="1652867261394" duration="1870000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

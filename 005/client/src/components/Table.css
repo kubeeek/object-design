@@ -1,0 +1,13 @@
+.ProductTable-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.ProductTable-table-row:not(:last-child) {
+    border-bottom: 1px rgba(245, 245, 245, 0.8) solid;
+}
+
+.ProductTable-table-row td {
+    padding: .5em 0 .5em 0;
+}
