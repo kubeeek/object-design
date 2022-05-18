@@ -1,0 +1,65 @@
+#extend("shared/master"):
+  #export("title"):
+    Tasks: read/create
+  #endexport
+
+  #export("script"):
+    async function deleteTask(id) {
+      console.info("DELETE /tasks/" + id + "/delete");
+
+      try {
+        const result = await fetch(`${document.URL}/${id}/delete`, {
+          method: "DELETE"
+        });
+        console.log(result);
+        if(result.ok)
+          window.location = "";
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  #endexport
+
+  #export("body"):
+    <h1>There are #count(tasks) tasks.</h1>
+    <table>
+      <tbody>
+        <tr>
+            <th>List name</th>
+            <th>Task</th>
+            <th></th>
+
+        </tr>
+        #for(task in tasks):
+        <tr>
+          <td>#(task.todolist.title)</td>
+          <td>#(task.name)</td>
+          <td><button onclick="window.location +='/#(task.id)';">edit</button></td>
+          <td><button onclick="deleteTask('#(task.id)')">delete</button></td>
+        </tr>
+        #endfor
+      </tbody>
+    </table>
+
+    #if(count(todolists) > 0):
+        <div>
+            <h1>Add a new Task:</h1>
+            <form method="POST" action="tasks/create">
+                <label for="todo">Todo-list:</label>
+                <select name="todolist" id="todolist">
+                    #for(todolist in todolists):
+                        <option value="#(todolist.id)">#(todolist.title)</option>
+                    #endfor
+                </select>
+                <label for="name">Name:</label>
+                <input name="name" id="name" placeholder="Make an appoitment"></input>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    #else:
+        <div>
+            <p>There is no any Todolist available. Make the Todolist first. </p<
+        </div>
+    #endif
+  #endexport
+#endextend

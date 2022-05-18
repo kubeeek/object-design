@@ -1,0 +1,43 @@
+#extend("shared/master"):
+  #export("title"):
+    Users: read
+  #endexport
+
+  #export("script"):
+    async function deleteUser(id) {
+      console.info("DELETE /users/" + id + "/delete");
+
+      try {
+        const result = await fetch(`${document.URL}/${id}/delete`, {
+          method: "DELETE"
+        });
+        console.log(result);
+        if(result.ok)
+          window.location = "";
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  #endexport
+
+  #export("body"):
+    <h1>There are #count(entityCollection) users.</h1>
+    <table>
+      <tbody>
+        <tr>
+            <th>Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+        #for(user in entityCollection):
+        <tr>
+          <td>#(user.name)</td>
+          <td><button onclick="deleteUser('#(user.id)')">delete</button></td>
+          <td><button onclick="window.location +='/#(user.id)';">edit</button></td>
+
+        </tr>
+        #endfor
+      </tbody>
+    </table>
+  #endexport
+#endextend

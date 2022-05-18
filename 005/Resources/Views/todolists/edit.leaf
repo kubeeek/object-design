@@ -1,0 +1,22 @@
+#extend("shared/master"):
+  #export("title"):
+    TodoLists: edit
+  #endexport
+
+  #export("script"):
+
+  #endexport
+
+  #export("body"):
+    <h1>Details:</h1>
+    <h2>Title: #(entity.title)</h2>
+    <h2>ID: #(entity.id)</h2>
+
+    <h1>Edit:</h1>
+    <form method="POST">
+        <label for="title">New title:</label>
+        <input name="title" id="title" placeholder="Shopping list"></input>
+        <button type="submit">Submit</button>
+    </form>
+  #endexport
+#endextend

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/styles/style.css">
+    <script>#import("script")</script>
+
+    <title>#import("title")</title>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="/todolists">todolists</a></li>
+            <li><a href="/tasks">tasks</a></li>
+            <li>
+                <a href="/users">users</a><br/>
+                <a href="/users/create">add a user</a>
+            </li>
+        </ul>
+    </div>
+    #import("body")
+</body>
+
+</html>
