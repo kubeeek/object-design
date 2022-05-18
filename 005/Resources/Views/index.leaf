@@ -1,9 +1,0 @@
-#extend("shared/master"):
-  #export("title"):
-    Hello world!
-  #endexport
-
-  #export("body"):
-    <h1>Hello!</h1>
-  #endexport
-#endextend
