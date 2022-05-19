@@ -12,6 +12,10 @@ Data manipulation is managed by two hooks: `useReducer` and `useState`. Where th
 In order to run everything, please type `npm run start` in the client directory and `npm run start` in the server directory. 
 
 Task 8:
+
+Sonarcloud is configured to only include this (005/) subdirectory for analysis.
+
+
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kubeeek_object-design&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kubeeek_object-design)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=kubeeek_object-design&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=kubeeek_object-design)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kubeeek_object-design&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kubeeek_object-design)
