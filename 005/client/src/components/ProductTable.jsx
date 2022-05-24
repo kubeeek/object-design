@@ -13,7 +13,7 @@ export default function ProductTable({ content, onClickCallback, type = 'add' })
                 body={
                     content.map((entry, index) =>
                         <tr key={index}
-                            className="ProductTable-table-row"
+                            className="TableComponent-table-row"
                         >
                             <td>{entry.name}</td>
                             <td>${entry.price / 100}</td>

@@ -33,9 +33,9 @@ function App() {
 
   async function fetchData(setter) {
     const result = await fetch("http://localhost:3001/services");
-    const services = await result.json();
+    const parsedResult = await result.json();
 
-    return setter(services);
+    return setter(parsedResult);
   }
 
   function onProductSelected(product) {

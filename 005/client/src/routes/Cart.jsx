@@ -5,10 +5,10 @@ import CartSummary from "../components/CartSummary";
 export default function Cart({ CartTable, cart, userId, onOrderButtonCallback }) {
     const navigate = useNavigate();
 
-    const placeOrder = async (cart) => {
+    const placeOrder = async (currentCart) => {
         const items = {};
 
-        cart.forEach(element => {
+        currentCart.forEach(element => {
             if (element.id in items)
                 return items[element.id]++;
 

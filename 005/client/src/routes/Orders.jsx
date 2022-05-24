@@ -12,11 +12,11 @@ export default function Orders({ userId }) {
     async function getOrders() {
         console.log(userId);
         const result = await window.fetch(`http://localhost:3001/orders?filter={"where":{"userId":${userId}}}`);
-        const orders = await result.json();
+        const parsedResult = await result.json();
 
         if (result.ok)
-            setOrders(orders);
-    };
+            setOrders(parsedResult);
+    }
 
     async function payOrder(order) {
         const result = await window.fetch(`http://localhost:3001/orders/${order.uuid}/pay`,
@@ -27,7 +27,7 @@ export default function Orders({ userId }) {
 
         if (result.ok)
             setRefresh(refresh + 1);
-    };
+    }
 
     useEffect(() => {
         getOrders();

@@ -4,9 +4,9 @@ function CartSummary({ cart, onClickCallback }) {
     const [prices, setPrice] = useState([])
 
     useEffect(() => {
-        const prices = cart.map(element => element.price);
+        const pricesArray = cart.map(element => element.price);
 
-        setPrice(prices);
+        setPrice(pricesArray);
     }, [cart])
 
 
