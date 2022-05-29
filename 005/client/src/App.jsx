@@ -7,6 +7,7 @@ import Home from "./routes/Home";
 import Layout from "./routes/Layout";
 import Cart from "./routes/Cart";
 import Orders from "./routes/Orders";
+import Contact from "./routes/Contact";
 
 import NoMatch from "./routes/NoMatch";
 
@@ -73,6 +74,7 @@ function App() {
           />
           <Route path="cart" element={<Cart userId={userId} onOrderButtonCallback={onOrderButtonClick} CartTable={<ProductTable content={cart} type={"remove"} onClickCallback={onCartItemSelected} />} cart={cart} />} />
           <Route path="orders" element={<Orders userId={userId} />} />
+          <Route path="contact" element={<Contact />} />
 
           <Route path="*" element={<NoMatch />} />
         </Route>

@@ -19,6 +19,11 @@ export default function Layout({ cartEntriesCount }) {
                         </Link>
                     </li>
                     <li className="Layout-nav-link">
+                        <Link to="/contact">
+                            Contact
+                        </Link>
+                    </li>
+                    <li className="Layout-nav-link">
                         <Link to="/cart">
                             <FontAwesomeIcon icon={faShoppingCart} />
                             {cartEntriesCount > 0 &&

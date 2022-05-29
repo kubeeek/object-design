@@ -30,3 +30,14 @@
     background: red;
     border-radius: 100%;
 }
+
+.Layout-error-box {
+    padding: 1rem;
+    background: orangered;
+    border-radius: 5rem;
+    margin-bottom: 1rem;
+}
+
+.Layout-error-box:last-child {
+    margin-bottom: 0rem;
+}
