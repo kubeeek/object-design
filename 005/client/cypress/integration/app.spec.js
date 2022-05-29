@@ -104,7 +104,7 @@ describe('Home page', () => {
         })
     });
 })
-  12
+
 describe("Cart page", () => {
     before(async () => {
         await clearServerServices()
