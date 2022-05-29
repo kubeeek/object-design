@@ -255,16 +255,20 @@ describe("Contact page", () => {
 
         cy.get('[name="topic"]').type('Lorem ipsum')
         cy.get('[name="email"]').type('lorem@ipsum.pl')
-        cy.get('[name="text"]').type("Lorem irem sjadha kdsa")
+        cy.get('[name="text"]').type("Lorem irem sjadha kdsa Lorem irem sjadha kdsa")
         cy.get('form').find('button').click()
+
+        cy.contains('Form sent')
     })
 
     it('shows errors at no valid form', () =>{
         cy.get('nav > ul').contains('Contact').click()
 
-        cy.get('[name="topic"]').type('')
-        cy.get('[name="email"]').type('loremipsum.pl')
-        cy.get('[name="text"]').type("")
+        cy.get('[name="topic"]').clear().type(' E')
+        cy.get('[name="email"]').clear().type('lorem@ipsum.pl')
+        cy.get('[name="text"]').clear().type("E")
         cy.get('form').find('button').click()
+
+        cy.get('body').find('.Layout-error-box').should('have.length', 2)
     })
 });
