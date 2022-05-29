@@ -5,10 +5,10 @@ import {
 } from '@loopback/repository';
 import {
   get,
-  getModelSchemaRef, param, post, requestBody, response
+  getModelSchemaRef, param, post, requestBody, response, del
 } from '@loopback/rest';
-import {Order} from '../models';
-import {OrderRepository, ServiceRepository} from '../repositories';
+import { Order } from '../models';
+import { OrderRepository, ServiceRepository } from '../repositories';
 
 /* we want only get (all) and post */
 export class OrderController {
@@ -23,7 +23,7 @@ export class OrderController {
   @post('/orders')
   @response(200, {
     description: 'Order model instance',
-    content: {'application/json': {schema: getModelSchemaRef(Order)}},
+    content: { 'application/json': { schema: getModelSchemaRef(Order) } },
   })
   async create(
     @requestBody({
@@ -49,7 +49,7 @@ export class OrderController {
       'application/json': {
         schema: {
           type: 'array',
-          items: getModelSchemaRef(Order, {includeRelations: true}),
+          items: getModelSchemaRef(Order, { includeRelations: true }),
         },
       },
     },
@@ -57,7 +57,7 @@ export class OrderController {
   async find(
     @param.filter(Order) filter?: Filter<Order>,
   ): Promise<Order[]> {
-    const orderArray: Order[] = await this.orderRepository.find({...filter, fields: {id: false, userId: false}});
+    const orderArray: Order[] = await this.orderRepository.find({ ...filter, fields: { id: false, userId: false } });
 
     for (const order of orderArray) {
       const items: Object[] = [];
@@ -84,13 +84,13 @@ export class OrderController {
     description: 'Order model instance',
     content: {
       'application/json': {
-        schema: getModelSchemaRef(Order, {includeRelations: true}),
+        schema: getModelSchemaRef(Order, { includeRelations: true }),
       },
     },
   })
   async findById(
     @param.path.number('id') id: number,
-    @param.filter(Order, {exclude: 'where'}) filter?: FilterExcludingWhere<Order>
+    @param.filter(Order, { exclude: 'where' }) filter?: FilterExcludingWhere<Order>
   ): Promise<Order> {
     return this.orderRepository.findById(id, filter);
   }
@@ -100,19 +100,32 @@ export class OrderController {
     description: 'Mocking pay',
     content: {
       'application/json': {
-        schema: getModelSchemaRef(Order, {includeRelations: true}),
+        schema: getModelSchemaRef(Order, { includeRelations: true }),
       },
     },
   })
   async payByUuId(
     @param.path.string('uuid') uuid: string,
   ): Promise<Order | void> {
-    const result = await this.orderRepository.findOne({where: {uuid}})
+    const result = await this.orderRepository.findOne({ where: { uuid } })
 
     if (result === null)
       return;
 
     result.paid = true;
     return this.orderRepository.save(result);
+  }
+
+  @del('/orders/{uuid}')
+  @response(204, {
+    description: 'Order DELETE success',
+  })
+  async deleteByUuid(@param.path.string('uuid') uuid: string): Promise<void> {
+    const result = await this.orderRepository.findOne({ where: { uuid } })
+
+    if (result === null)
+      return;
+
+    return this.orderRepository.delete(result);
   }
 }
